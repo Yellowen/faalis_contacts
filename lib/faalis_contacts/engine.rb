@@ -5,7 +5,6 @@ end
 
 require "faalis"
 
-
 module FaalisContacts
   class Engine < ::Rails::Engine
   engine_name "faalis_contacts"
@@ -15,5 +14,6 @@ module FaalisContacts
     end
 
     ::Faalis::Plugins.register "faalis_contacts", self
+    ::Faalis::Engine.dashboard_js_manifest = "faalis_contacts/application.js"
   end
 end

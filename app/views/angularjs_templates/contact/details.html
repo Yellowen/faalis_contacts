@@ -1,0 +1,40 @@
+<div class="details">
+    
+      <p>
+      <b translate>Contact :</b> {{object.contact}}
+      </p>
+    
+      <p>
+      <b translate>Prefix :</b> {{object.prefix}}
+      </p>
+    
+      <p>
+      <b translate>First_name :</b> {{object.first_name}}
+      </p>
+    
+      <p>
+      <b translate>Middle_name :</b> {{object.middle_name}}
+      </p>
+    
+      <p>
+      <b translate>Last_name :</b> {{object.last_name}}
+      </p>
+    
+      <p>
+      <b translate>Suffix :</b> {{object.suffix}}
+      </p>
+    
+      <p>
+      <b translate>Organization :</b> {{object.organization}}
+      </p>
+    
+      <p>
+      <b translate>Is_organization :</b> {{object.is_organization}}
+      </p>
+    
+  <ul class="button-group float-right">
+    <a ng-href="#/contacts/{{ object.id }}/edit" class="small">
+      <span class="fa fa-edit"></span> <span translated>Edit</span>
+    </a>
+  </ul>
+</div>

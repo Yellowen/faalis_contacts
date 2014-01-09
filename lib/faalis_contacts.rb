@@ -1,4 +1,4 @@
-require "faalis_contacts/engine"
+require "faalis"
 
 module FaalisContacts
 end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prefix: MyString
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  suffix: MyString
+  organization: MyString
+  is_organization: false
+
+two:
+  prefix: MyString
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  suffix: MyString
+  organization: MyString
+  is_organization: false
