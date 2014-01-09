@@ -12,12 +12,12 @@ Feature: Contacts API
     Then I should get "401" status code
     When format is json and I send patch to "/api/v1/contacts/1" with:
     """
-    {"contact":"AedHqBqSuFQOmGHlWhyuBcSntcHtmwHQJfpcnCwXiSnzyBzPec","prefix":"ZHSdTKJiltjpitSyTtLVvbTIHcHUDmQjakVeALWkWvqKUNuDVO","first_name":"czUNqdBfbFDLyhTCfIwWJvragHfBXcFlPKMArzglAymhNdJLTm","middle_name":"uIzEdWLVGMfxLgxfvjlWJQUKIsShUxKUAYOFxFkSjbkMPfBNXb","last_name":"weGqHmFnmWDWwIjFGaDEQSPsqwpJsxzNTiSkCuWcjGTaSVVkJu","suffix":"XNourxtZRWgGArKnKiUelmVPZqeTmCSJmfrVrgneLiyxQEqfdx","organization":"AGgmqqsqpSaMDxJYsLfBbEFnvmoOItaPHWDRpSvUNyPsaxJiHs","is_organization":"puMMbWgsMvcnfUhGQxGVNZcAwgPKPusYfMPMfmuqPPqIIxhSUq"}
+    {"prefix":"HQhVrOxiqgzXyCgnRxPYZSbXTBFJJXDIIrFmbNYEUVTWSisilR","first_name":"LRfGVeslcIpXGusxUSoRQphMiVPijxuBBPQWDZxqqxYaOQdKdd","middle_name":"SxUEAaCtqwNGWNbXOYMBojkAmpjLkOLVOUgjwqgsEKeatBqDMp","last_name":"leyxfEervNPxPMKvrZRGkgjKuCTClKBPiHMDyPunHSJEDpRkVB","suffix":"DxnSEPyTWKZRxrVeCJTyQHQhfaSAGlkGAiMOcZJnLprCZJzNUm","organization":"NOMCwCAgfxfnFjUBQkqpOArSvhTglMEGksdLrrNcRmtROkraND","is_organization":"VLkZETIeHjKxXfXZSfbJeYBdRkbDXpvKOjAIhKGLUaLrHszXbx"}
     """
     Then I should get "401" status code
     When format is json and I send post to "/api/v1/contacts" with:
     """
-    {"contact":"JuexKSnPQExoWhOycOPbEfkuwBaklbMPfDxhwgjhwdLUgSSqFa","prefix":"aaaEbXoDJbkZkdvuHKKNDpYenjfLBBwjizhURiFLDRyvMkXmHM","first_name":"LDEvskiohJLJLMLFKkwaDHgfGvzjkKAXvbPKIPJrpRadClvmEs","middle_name":"vVWuDUoOHggPxIpfWhHalsxUvqDbNoLepZKwUtpCqDaLlaZRHY","last_name":"ArvXNqFcSiZtPqKaXJhnAJIwUeMJZaveQMiVvYFbrSyeSJphct","suffix":"sLmRHrYaodvjulQjqPSzxmJFgCHoDavBRacfCwtwyaTiBTDDIl","organization":"pqxwOZuOXYzrCmBrybioaobrytlDAITVbumfMyHwgyAEePEkyV","is_organization":"bsEspmqEnuvFsXTliJTgGRSigIpyuUPRmCGiuIdDxIFkXhIEds"}
+    {"prefix":"eUDlBTjIboCYYcDhdKWPpQGwlhtAIjfbBCMaZxcTWILywlbYJE","first_name":"UGCPoUaMMRcBgKjpqTAOSrxONzhoTRFDbgacFknhRDreTXqDow","middle_name":"JPOTsijIicTgAvURRsKOPKDWvdfWotXDaGQMewtpqSSocHXeMp","last_name":"wcvUDqsKyWKEnAiDxfLKugLZYQlAUpLOVPCFwskOqmBiFQLUIv","suffix":"kHPMZyrWxqwzdkALosaffjKoZjXpaZzLPPCVasbFFqNhOwfpFu","organization":"FTvDYjiGfmWDyyjQkwdvbVNLkUJFIkKYMLdgSGcAuAcVmshGUN","is_organization":"SQIodBpVbmipJBUPayiUZjmMajXpIpbQjPytAInjQAswFUPLCS"}
     """
     Then I should get "401" status code
     When format is json and I send delete to "/api/v1/contacts/1"

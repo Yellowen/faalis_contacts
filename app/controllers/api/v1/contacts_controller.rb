@@ -46,7 +46,7 @@ class API::V1::ContactsController < Faalis::APIController
   end
 
   def resource_params
-    params.require(:contact).permit(:id, :contact, :prefix, :first_name, :middle_name, :last_name, :suffix, :organization, :is_organization)
+    params.require(:contact).permit(:id, :prefix, :first_name, :middle_name, :last_name, :suffix, :organization, :is_organization)
   end
 
 end

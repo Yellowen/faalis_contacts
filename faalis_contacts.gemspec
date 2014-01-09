@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.licenses = ['GPL-2']
   s.name        = "faalis_contacts"
   s.version     = FaalisContacts::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of FaalisContacts."
-  s.description = "TODO: Description of FaalisContacts."
+  s.authors     = ["Sameer Rahmani", "Behnam Ahmad Khan Beigi"]
+  s.email       = ["lxsameer@gnu.org", "yottanami@gnu.org"]
+  s.homepage    = "https://github.com/Yellowen/Faalis-Contacts"
+  s.summary     = "Contacts plugin for Faalis."
+  s.description = "Contacts plugin for Faalis. Provide very complete contacts application."
 
   s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]

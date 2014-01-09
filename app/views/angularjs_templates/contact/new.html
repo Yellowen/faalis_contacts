@@ -3,6 +3,8 @@
       <li ng-click="activate_tab(1)" ng-class="{active: current_tab == 1, tab1: current_tab == 1}"><span translate>General</span></li> |
     
       <li ng-click="activate_tab(2)" ng-class="{active: current_tab == 2, tab2: current_tab == 2}"><span translate>Extra</span></li> |
+    
+      <li ng-click="activate_tab(3)" ng-class="{active: current_tab == 3, tab3: current_tab == 3}"><span translate>Avatar</span></li> |
     </ul>
 </section>
 
@@ -14,71 +16,71 @@
   
     <div class="row">
       <div class="small-4 columns ">
-        <label><span translate>Contact</span> :</label>
-        
-          <input  id="id_contact" ng-model="contact" name="contact" type="text" class="rounded _field"  />
-        
-          <small id="id_contact_msg"></small>
-    </div>
-  
-  
-  
-  
-    
-      <div class="small-4 columns float-left small-offset-2">
         <label><span translate>Prefix</span> :</label>
         
           <input  id="id_prefix" ng-model="prefix" name="prefix" type="text" class="rounded string_field"  />
         
           <small id="id_prefix_msg"></small>
     </div>
-  </div>
   
   
   
-    <div class="row">
-      <div class="small-4 columns ">
+  
+    
+      <div class="small-4 columns float-left small-offset-2">
         <label><span translate>First name</span> :</label>
         
           <input  id="id_first_name" ng-model="first_name" name="first_name" type="text" class="rounded string_field"  />
         
           <small id="id_first_name_msg"></small>
     </div>
+  </div>
   
   
   
-  
-    
-      <div class="small-4 columns float-left small-offset-2">
+    <div class="row">
+      <div class="small-4 columns ">
         <label><span translate>Middle name</span> :</label>
         
           <input  id="id_middle_name" ng-model="middle_name" name="middle_name" type="text" class="rounded string_field"  />
         
           <small id="id_middle_name_msg"></small>
     </div>
-  </div>
   
   
   
-    <div class="row">
-      <div class="small-4 columns ">
+  
+    
+      <div class="small-4 columns float-left small-offset-2">
         <label><span translate>Last name</span> :</label>
         
           <input  id="id_last_name" ng-model="last_name" name="last_name" type="text" class="rounded string_field"  />
         
           <small id="id_last_name_msg"></small>
     </div>
+  </div>
+  
+  
+  
+    <div class="row">
+      <div class="small-4 columns ">
+        <label><span translate>Suffix</span> :</label>
+        
+          <input  id="id_suffix" ng-model="suffix" name="suffix" type="text" class="rounded string_field"  />
+        
+          <small id="id_suffix_msg"></small>
+    </div>
   
   
   
   
     
       <div class="small-4 columns float-left small-offset-2">
-        <label><span translate>Suffix</span> :</label>
+        <label><span translate>Organization</span> :</label>
         
-          <input  id="id_suffix" ng-model="suffix" name="suffix" type="text" class="rounded string_field"  />
+          <input  id="id_organization" ng-model="organization" name="organization" type="text" class="rounded string_field"  />
         
-          <small id="id_suffix_msg"></small>
+          <small id="id_organization_msg"></small>
     </div>
   </div>
   
@@ -86,25 +88,13 @@
   
     <div class="row">
       <div class="small-4 columns ">
-        <label><span translate>Organization</span> :</label>
-        
-          <input  id="id_organization" ng-model="organization" name="organization" type="text" class="rounded string_field"  />
-        
-          <small id="id_organization_msg"></small>
-    </div>
-  
-  
-  
-  
-    
-      <div class="small-4 columns float-left small-offset-2">
         <label><span translate>Is organization</span> :</label>
         
           <input  id="id_is_organization" ng-model="is_organization" type="checkbox" name="is_organization" class="rounded boolean_field"  />
           
           <small id="id_is_organization_msg"></small>
     </div>
-  </div>
+  
   
   
   
@@ -116,6 +106,20 @@
   <legend ng-if="!editing"><span translate>New Extra</span></legend>
   <legend ng-if="editing"><span translate>Edit Extra</span></legend>
   
+  
+  
+  
+  
+  
+  
+  
+  </fieldset>
+
+<form novalidate name="form">
+ <div class="newform">
+  <fieldset class="form" ng-if="current_tab == 3">
+  <legend ng-if="!editing"><span translate>New Avatar</span></legend>
+  <legend ng-if="editing"><span translate>Edit Avatar</span></legend>
   
   
   

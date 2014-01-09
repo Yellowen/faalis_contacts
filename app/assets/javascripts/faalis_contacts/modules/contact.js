@@ -50,8 +50,6 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
     };
 
     $scope.columns = [
-        {field:'contact', displayName: gettext('Contact')},
-    
         {field:'prefix', displayName: gettext('Prefix')},
     
         {field:'first_name', displayName: gettext('First name')},
@@ -74,7 +72,7 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
         },
         {
             name: "is_organization",
-            title: gettext("Is_organization"),
+            title: gettext("Is organization"),
             type: "boolean"
         },
     ];
@@ -233,7 +231,6 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
         var obj = API.one("contacts", $scope.obj_id).get()
                 .then(function(data) {
                 
-                    $scope.contact = to_(data.contact);
                     $scope.prefix = data.prefix;
                     $scope.first_name = data.first_name;
                     $scope.middle_name = data.middle_name;
@@ -265,7 +262,6 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
 
     $scope.save = function(save_another){
         var contact = {contact: {
-            contact: $scope.contact,
             prefix: $scope.prefix,
             first_name: $scope.first_name,
             middle_name: $scope.middle_name,
