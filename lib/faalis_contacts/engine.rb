@@ -13,7 +13,5 @@ module FaalisContacts
       config.models_with_permission = []
     end
 
-    ::Faalis::Plugins.register "faalis_contacts", self
-    ::Faalis::Engine.dashboard_js_manifest = "faalis_contacts/application.js"
   end
 end
