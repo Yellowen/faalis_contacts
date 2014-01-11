@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  detail_name: MyString
+  detail_type: MyString
+  detail: MyString
+  contact_id: 1
+
+two:
+  detail_name: MyString
+  detail_type: MyString
+  detail: MyString
+  contact_id: 1

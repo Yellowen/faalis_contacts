@@ -51,17 +51,17 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
 
     $scope.columns = [
         {field:'prefix', displayName: gettext('Prefix')},
-    
+
         {field:'first_name', displayName: gettext('First name')},
-    
+
         {field:'middle_name', displayName: gettext('Middle name')},
-    
+
         {field:'last_name', displayName: gettext('Last name')},
-    
+
         {field:'suffix', displayName: gettext('Suffix')},
-    
+
         {field:'organization', displayName: gettext('Organization')},
-    
+
         {field:'is_organization', displayName: gettext('Is organization')},
     ];
     $scope.fields = [
@@ -174,7 +174,7 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
         $scope.view_progressbar = false;
         $scope.bulk_edit = false;
     };
-    
+
     /*
      * On delete event handler - `items` is an array of objects to delete
      */
@@ -210,6 +210,25 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
 Contacts.controller("AddContactController", ["Restangular", "$scope", "$location", "$routeParams", "gettext", "catch_error", function(API, $scope, $location, $routeParams, gettext, catch_error){
 
     $scope.select2options = {};
+
+    // Details vars
+    $scope.details_count = [0];
+    $scope.details = [{}];
+    $scope.detail_fields = [
+        {name: "phone", title: gettext("Phone")},
+        {name: "email", title: gettext("Email")},
+        {name: "website", title: gettext("Website")},
+        {name: "im", title: gettext("IM")},
+        {name: "address", title: gettext("Address")}
+    ];
+
+    $scope.detail_types = [
+        {name: "main", title: gettext("Main")},
+        {name: "work", title: gettext("Work")},
+        {name: "home", title: gettext("Home")}
+    ];
+    // ---
+
     $scope.editing = false;
     $scope.current_tab = 1;
     $scope.activate_tab = function(tab, $event){
@@ -218,8 +237,8 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
     $scope.obj_id = null;
     var is_copy = false;
 
-    
-    
+
+
     if( "id" in $routeParams ){
         $scope.obj_id = $routeParams.id;
         $scope.editing = true;
@@ -230,7 +249,7 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
 
         var obj = API.one("contacts", $scope.obj_id).get()
                 .then(function(data) {
-                
+
                     $scope.prefix = data.prefix;
                     $scope.first_name = data.first_name;
                     $scope.middle_name = data.middle_name;
@@ -244,6 +263,20 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
 
     }
 
+
+    $scope.add_another_row = function(){
+        var last = _.last($scope.details_count);
+        if (last === undefined) {
+            last = -1;
+        }
+        $scope.details_count.push(last + 1);
+        $scope.details.push({});
+    };
+
+    $scope.remove_row = function(){
+        $scope.details_count.pop();
+        $scope.details.pop();
+    };
 
     $scope.have = function(field, obj_id) {
         var tmp = _.where($scope[field], {id: obj_id});
@@ -269,6 +302,7 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
             suffix: $scope.suffix,
             organization: $scope.organization,
             is_organization: $scope.is_organization,
+            details: $scope.details,
             __res__: 0
         }};
         if (($scope.obj_id) && (is_copy === false)) {
@@ -303,4 +337,3 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
 
     };
 }]);
-

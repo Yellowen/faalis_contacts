@@ -8,7 +8,10 @@ class API::V1::ContactsController < Faalis::APIController
   end
 
   def create
-    
+    details = params[:details] || []
+
+    details.each do |detail|
+    end
     if @contact.save
       respond_with(@contact)
     else
@@ -23,7 +26,7 @@ class API::V1::ContactsController < Faalis::APIController
   end
 
   def update
-    
+
 
     if @contact.update(resource_params)
       respond_with(@contact)

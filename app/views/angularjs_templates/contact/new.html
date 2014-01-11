@@ -1,143 +1,116 @@
 <section class="tabs">
   <ul>
-      <li ng-click="activate_tab(1)" ng-class="{active: current_tab == 1, tab1: current_tab == 1}"><span translate>General</span></li> |
-    
-      <li ng-click="activate_tab(2)" ng-class="{active: current_tab == 2, tab2: current_tab == 2}"><span translate>Extra</span></li> |
-    
-      <li ng-click="activate_tab(3)" ng-class="{active: current_tab == 3, tab3: current_tab == 3}"><span translate>Avatar</span></li> |
-    </ul>
+    <li ng-click="activate_tab(1)" ng-class="{active: current_tab == 1, tab1: current_tab == 1}"><span translate>General</span></li> |
+    <li ng-click="activate_tab(2)" ng-class="{active: current_tab == 2, tab2: current_tab == 2}"><span translate>Details</span></li> |
+    <li ng-click="activate_tab(3)" ng-class="{active: current_tab == 3, tab3: current_tab == 3}"><span translate>Avatar</span></li> |
+  </ul>
 </section>
 
 <form novalidate name="form">
- <div class="newform">
-  <fieldset class="form" ng-if="current_tab == 1">
-  <legend ng-if="!editing"><span translate>New General</span></legend>
-  <legend ng-if="editing"><span translate>Edit General</span></legend>
-  
-    <div class="row">
-      <div class="small-4 columns ">
-        <label><span translate>Prefix</span> :</label>
-        
+  <div class="newform">
+    <fieldset class="form" ng-show="current_tab == 1">
+      <legend><span translate>General</span></legend>
+
+      <div class="row">
+        <div class="small-4 columns ">
+          <label><span translate>Prefix</span> :</label>
           <input  id="id_prefix" ng-model="prefix" name="prefix" type="text" class="rounded string_field"  />
-        
           <small id="id_prefix_msg"></small>
-    </div>
-  
-  
-  
-  
-    
-      <div class="small-4 columns float-left small-offset-2">
-        <label><span translate>First name</span> :</label>
-        
+        </div>
+
+        <div class="small-4 columns float-left small-offset-2">
+          <label><span translate>First name</span> :</label>
           <input  id="id_first_name" ng-model="first_name" name="first_name" type="text" class="rounded string_field"  />
-        
           <small id="id_first_name_msg"></small>
-    </div>
-  </div>
-  
-  
-  
-    <div class="row">
-      <div class="small-4 columns ">
-        <label><span translate>Middle name</span> :</label>
-        
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-4 columns ">
+          <label><span translate>Middle name</span> :</label>
           <input  id="id_middle_name" ng-model="middle_name" name="middle_name" type="text" class="rounded string_field"  />
-        
           <small id="id_middle_name_msg"></small>
-    </div>
-  
-  
-  
-  
-    
-      <div class="small-4 columns float-left small-offset-2">
-        <label><span translate>Last name</span> :</label>
-        
+        </div>
+
+        <div class="small-4 columns float-left small-offset-2">
+          <label><span translate>Last name</span> :</label>
           <input  id="id_last_name" ng-model="last_name" name="last_name" type="text" class="rounded string_field"  />
-        
           <small id="id_last_name_msg"></small>
-    </div>
-  </div>
-  
-  
-  
-    <div class="row">
-      <div class="small-4 columns ">
-        <label><span translate>Suffix</span> :</label>
-        
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-4 columns ">
+          <label><span translate>Suffix</span> :</label>
           <input  id="id_suffix" ng-model="suffix" name="suffix" type="text" class="rounded string_field"  />
-        
           <small id="id_suffix_msg"></small>
-    </div>
-  
-  
-  
-  
-    
-      <div class="small-4 columns float-left small-offset-2">
-        <label><span translate>Organization</span> :</label>
-        
+        </div>
+
+        <div class="small-4 columns float-left small-offset-2">
+          <label><span translate>Organization</span> :</label>
           <input  id="id_organization" ng-model="organization" name="organization" type="text" class="rounded string_field"  />
-        
           <small id="id_organization_msg"></small>
-    </div>
-  </div>
-  
-  
-  
-    <div class="row">
-      <div class="small-4 columns ">
-        <label><span translate>Is organization</span> :</label>
-        
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-4 columns ">
+          <label><span translate>Is organization</span> :</label>
           <input  id="id_is_organization" ng-model="is_organization" type="checkbox" name="is_organization" class="rounded boolean_field"  />
-          
           <small id="id_is_organization_msg"></small>
+        </div>
+
+    </fieldset>
+
+    <div class="newform">
+      <fieldset class="form" ng-show="current_tab == 2">
+        <legend><span translate>Details</span></legend>
+
+        <div class="row" ng-repeat="detail_number in details_count">
+            <div class="small-4 columns">
+              <label><span translate>Field</span> :</label>
+              <select name="detail_field_{{ detail_number }}" id="detail_field_{{ detail_number }}" ng-model="details[detail_number].field">
+                <option ng-repeat="item in detail_fields" value="{{ item.name }}">{{ item.title }}</option>
+              </select>
+            </div>
+
+            <div class="small-4 columns">
+              <label><span translate>Type</span> :</label>
+              <select name="detail_type_{{ detail_number }}" id="detail_type_{{ detail_number }}" ng-model="details[detail_number].type">
+                <option ng-repeat="item in detail_types" value="{{ item.name }}">{{ item.title }}</option>
+              </select>
+            </div>
+
+            <div class="small-4 columns">
+              <label><span translate>Value</span> :</label>
+              <input  id="detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="rounded string_field"/>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="small-2 columns float-right">
+            <span ng-click="add_another_row()" class="btn tiny green"><i class="fa fa-plus"></i></span>
+            <span ng-click="remove_row()" class="btn tiny red"><i class="fa fa-minus"></i></span>
+          </div>
+        </div>
+      </fieldset>
     </div>
-  
-  
-  
-  
-  </fieldset>
 
-<form novalidate name="form">
- <div class="newform">
-  <fieldset class="form" ng-if="current_tab == 2">
-  <legend ng-if="!editing"><span translate>New Extra</span></legend>
-  <legend ng-if="editing"><span translate>Edit Extra</span></legend>
-  
-  
-  
-  
-  
-  
-  
-  
-  </fieldset>
+    <div class="newform">
+      <fieldset class="form" ng-show="current_tab == 3">
+        <legend ng-if="!editing"><span translate>New Avatar</span></legend>
+        <legend ng-if="editing"><span translate>Edit Avatar</span></legend>
 
-<form novalidate name="form">
- <div class="newform">
-  <fieldset class="form" ng-if="current_tab == 3">
-  <legend ng-if="!editing"><span translate>New Avatar</span></legend>
-  <legend ng-if="editing"><span translate>Edit Avatar</span></legend>
-  
-  
-  
-  
-  
-  
-  
-  
-  </fieldset>
-
+      </fieldset>
+    </div>
 </form>
 
 
-  <div class="row">
-      <div class="small-6 columns">
-        <button class="btn small green" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save</span></button>
-        <button class="btn small blue" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
-        <button class="btn small red" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
-      </div>
+<div class="row">
+  <div class="small-6 columns">
+    <button class="btn small green" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save</span></button>
+    <button class="btn small blue" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
+    <button class="btn small red" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
   </div>
+</div>
 </div>
