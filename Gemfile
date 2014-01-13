@@ -14,7 +14,6 @@ gemspec
 # gem 'debugger'
 
 group :development do
-
   gem 'faalis', :path => File.expand_path('../../Faalis/', __FILE__)
   gem "pry"
   gem "rspec-rails", "~> 3.0.0.beta"
