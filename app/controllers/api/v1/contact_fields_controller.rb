@@ -8,7 +8,7 @@ class API::V1::ContactFieldsController < Faalis::APIController
   end
 
   def create
-    
+
     if @contact_field.save
       respond_with(@contact_field)
     else
@@ -23,7 +23,7 @@ class API::V1::ContactFieldsController < Faalis::APIController
   end
 
   def update
-    
+
 
     if @contact_field.update(resource_params)
       respond_with(@contact_field)

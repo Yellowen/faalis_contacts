@@ -1,6 +1,6 @@
 
 // Contacts Module
-var Contacts = angular.module("Contact", ["ListView", "Filter", "Anim"]);
+var Contacts = angular.module("Contact", ["ListView", "Filter", "Anim", "ContactField", "ContactType"]);
 
 // Contacts configuration section ---------------------------
 Contacts.config(["$routeProvider", function($routeProvider){
@@ -51,18 +51,12 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
 
     $scope.columns = [
         {field:'prefix', displayName: gettext('Prefix')},
-
         {field:'first_name', displayName: gettext('First name')},
-
         {field:'middle_name', displayName: gettext('Middle name')},
-
         {field:'last_name', displayName: gettext('Last name')},
-
         {field:'suffix', displayName: gettext('Suffix')},
-
         {field:'organization', displayName: gettext('Organization')},
-
-        {field:'is_organization', displayName: gettext('Is organization')},
+        {field:'is_organization', displayName: gettext('Is organization')}
     ];
     $scope.fields = [
         {
@@ -74,7 +68,7 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
             name: "is_organization",
             title: gettext("Is organization"),
             type: "boolean"
-        },
+        }
     ];
 
     // details_template is the address of template which should load for
@@ -96,7 +90,7 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
             classes: "btn tiny yellow",
             action: function(){
                 $scope.$apply("bulk_edit = ! bulk_edit");
-            },
+            }
 
         },
         {
@@ -214,19 +208,17 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
     // Details vars
     $scope.details_count = [0];
     $scope.details = [{}];
-    $scope.detail_fields = [
-        {name: "phone", title: gettext("Phone")},
-        {name: "email", title: gettext("Email")},
-        {name: "website", title: gettext("Website")},
-        {name: "im", title: gettext("IM")},
-        {name: "address", title: gettext("Address")}
-    ];
+    API.all("contact_fields").getList().then(function(data){
+        $scope.detail_fields = data;
+    }, function(data) {
+        catch_error(data);
+    });
 
-    $scope.detail_types = [
-        {name: "main", title: gettext("Main")},
-        {name: "work", title: gettext("Work")},
-        {name: "home", title: gettext("Home")}
-    ];
+    API.all("contact_types").getList().then(function(data){
+    $scope.detail_types = data;
+    }, function(data) {
+        catch_error(data);
+    });
     // ---
 
     $scope.editing = false;

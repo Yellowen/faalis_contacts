@@ -8,7 +8,7 @@ class API::V1::ContactTypesController < Faalis::APIController
   end
 
   def create
-    
+
     if @contact_type.save
       respond_with(@contact_type)
     else
@@ -23,7 +23,7 @@ class API::V1::ContactTypesController < Faalis::APIController
   end
 
   def update
-    
+
 
     if @contact_type.update(resource_params)
       respond_with(@contact_type)
@@ -36,13 +36,13 @@ class API::V1::ContactTypesController < Faalis::APIController
 
   def destroy
     ids = params[:id].split(",")
-    @contact_types = ::ContactType.where(:id => ids)
+    @contact_types = ContactType.where(:id => ids)
     authorize! :destroy, @contact_types
     @contact_types.destroy_all
   end
 
   def build_resource
-    @contact_type = ::ContactType.new(resource_params)
+    @contact_type = ContactType.new(resource_params)
   end
 
   def resource_params

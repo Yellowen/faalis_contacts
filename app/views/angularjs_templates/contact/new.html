@@ -69,21 +69,25 @@
         <div class="row" ng-repeat="detail_number in details_count">
             <div class="small-4 columns">
               <label><span translate>Field</span> :</label>
-              <select name="detail_field_{{ detail_number }}" id="detail_field_{{ detail_number }}" ng-model="details[detail_number].field">
-                <option ng-repeat="item in detail_fields" value="{{ item.name }}">{{ item.title }}</option>
+              <select name="detail_field_{{ detail_number }}" ui-select2="select2options" id="id_detail_field_{{ detail_number }}" ng-model="details[detail_number].field">
+                <option ng-repeat="item in detail_fields" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
               </select>
+              <small id="id_detail_field_{{ detail_number}}_msg"></small>
             </div>
 
             <div class="small-4 columns">
               <label><span translate>Type</span> :</label>
-              <select name="detail_type_{{ detail_number }}" id="detail_type_{{ detail_number }}" ng-model="details[detail_number].type">
-                <option ng-repeat="item in detail_types" value="{{ item.name }}">{{ item.title }}</option>
+              <select name="detail_type_{{ detail_number }}" ui-select2="select2options" id="id_detail_type_{{ detail_number }}" ng-model="details[detail_number].type">
+                <option ng-repeat="item in detail_types" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
               </select>
+              <small id="id_detail_type_{{ detail_number}}_msg"></small>
             </div>
 
             <div class="small-4 columns">
               <label><span translate>Value</span> :</label>
-              <input  id="detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="rounded string_field"/>
+              <input  id="id_detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="rounded string_field"/>
+              <small id="id_detail_value_{{ detail_number}}_msg"></small>
+
             </div>
         </div>
 
