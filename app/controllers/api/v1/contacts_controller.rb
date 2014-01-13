@@ -33,6 +33,17 @@ class API::V1::ContactsController < Faalis::APIController
   end
 
   def update
+    details = params[:contact][:details] || []
+    details_list = []
+    details.each do |detail|
+      contact_detail = ContactDetails.create!(:detail_field => detail[:field],
+                                              :detail_type => detail[:type],
+                                              :detail_value => detail[:value])
+      details_list << contact_detail
+    end
+
+    @contact.details = details_list
+
     if @contact.update(resource_params)
       respond_with(@contact)
     else
