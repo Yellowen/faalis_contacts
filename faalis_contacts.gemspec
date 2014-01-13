@@ -11,11 +11,11 @@ Gem::Specification.new do |s|
   s.version     = FaalisContacts::VERSION
   s.authors     = ["Sameer Rahmani", "Behnam Ahmad Khan Beigi"]
   s.email       = ["lxsameer@gnu.org", "yottanami@gnu.org"]
-  s.homepage    = "https://github.com/Yellowen/Faalis-Contacts"
+  s.homepage    = "https://github.com/Yellowen/faalis_contacts"
   s.summary     = "Contacts plugin for Faalis."
   s.description = "Contacts plugin for Faalis. Provide very complete contacts application."
 
-  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.0.2"
