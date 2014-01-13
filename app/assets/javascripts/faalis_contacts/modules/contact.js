@@ -337,3 +337,11 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
 
     };
 }]);
+
+Contacts.controller("ContactMenuController", ["gettext", function(gettext){
+    this.menu_items = [
+        {title: gettext("Contacts"), url: "/contacts"},
+        {title: gettext("Contact Fields"), url: "/contact_fields"},
+        {title: gettext("Contact Types"), url: "/contact_types"}
+    ];
+}]);
