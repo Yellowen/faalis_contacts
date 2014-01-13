@@ -10,13 +10,10 @@ class API::V1::ContactsController < Faalis::APIController
   def create
     details = params[:contact][:details] || []
     details_list = []
-    puts "<<<< ", details
     details.each do |detail|
-      puts ">>> " * 50, detail
       contact_detail = ContactDetails.create!(:detail_field => detail[:field],
                                               :detail_type => detail[:type],
                                               :detail_value => detail[:value])
-      puts "!!!" * 50, contact_detail
       details_list << contact_detail
     end
 

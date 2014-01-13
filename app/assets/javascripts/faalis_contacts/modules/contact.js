@@ -248,7 +248,12 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
                     $scope.last_name = data.last_name;
                     $scope.suffix = data.suffix;
                     $scope.organization = data.organization;
-                    $scope.is_organization = to_boolean(data.is_organization);
+                    $scope.is_organization = data.is_organization;
+                    $scope.details = data.details;
+                    $scope.details_count = [];
+                    for(i = 0; i < data.details.length; i++){
+                        $scope.details_count.push(i);
+                    }
                 }, function(data){
                     catch_error(data);
                 });
