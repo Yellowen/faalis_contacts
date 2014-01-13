@@ -199,6 +199,24 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
             catch_error(data);
         });
      */
+    $scope.full_name = function(value) {
+        if (! value.is_organization) {
+            var res =  value.prefix || "";
+            res = res + " " + value.first_name + " ";
+            if (value.middle_name){
+                res = res + value.middle_name;
+            }
+            res = res + " " + value.last_name;
+            if (value.suffix) {
+                res = res + " " + value.suffix;
+            }
+            return res;
+        }
+        else {
+            return value.organization;
+        }
+    };
+
 }]);
 
 Contacts.controller("AddContactController", ["Restangular", "$scope", "$location", "$routeParams", "gettext", "catch_error", function(API, $scope, $location, $routeParams, gettext, catch_error){
@@ -228,8 +246,6 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
     };
     $scope.obj_id = null;
     var is_copy = false;
-
-
 
     if( "id" in $routeParams ){
         $scope.obj_id = $routeParams.id;
