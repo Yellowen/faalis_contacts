@@ -7,7 +7,7 @@ namespace :build do
 
   desc "Create contact fields scaffold"
   task :fields do
-    system "rails g faalis:js_scaffold contact_field name:string --no-bulk --required name"
+    system "rails g faalis:js_scaffold contact_field name:string value_type:in:string,numeric,email validation_rules:text --no-bulk --required name --path faalis_contacts"
   end
 
   desc "Create contact type scaffold"

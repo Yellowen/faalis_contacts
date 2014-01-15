@@ -105,7 +105,11 @@ ContactFields.controller("AddContactFieldController", ["Restangular", "$scope", 
     var is_copy = false;
 
     
-    
+    $scope.value_type_choices = _.sortBy([
+        {name: "string", title: "String"},
+        {name: "numeric", title: "Numeric"},
+        {name: "email", title: "Email"},
+    ], "title");
     if( "id" in $routeParams ){
         $scope.obj_id = $routeParams.id;
         $scope.editing = true;
@@ -118,6 +122,8 @@ ContactFields.controller("AddContactFieldController", ["Restangular", "$scope", 
                 .then(function(data) {
                 
                     $scope.name = data.name;
+                    $scope.value_type = data.value_type;
+                    $scope.validation_rules = data.validation_rules;
                 }, function(data){
                     catch_error(data);
                 });
@@ -143,6 +149,8 @@ ContactFields.controller("AddContactFieldController", ["Restangular", "$scope", 
     $scope.save = function(save_another){
         var contact_field = {contact_field: {
             name: $scope.name,
+            value_type: $scope.value_type,
+            validation_rules: $scope.validation_rules,
             __res__: 0
         }};
         if (($scope.obj_id) && (is_copy === false)) {

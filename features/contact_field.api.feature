@@ -12,12 +12,12 @@ Feature: ContactFields API
     Then I should get "401" status code
     When format is json and I send patch to "/api/v1/contact_fields/1" with:
     """
-    {"name":"uGuuWgxWDTmxDSJEAVuxbOfFZTeBiQhDUbIZSLhscVilelsPvb"}
+    {"name":"BruPnFjTEjYlembtQrPzGRSGjumdCmUGwtwQensbjYmPJOzclD","value_type":"OTgbJykHBhFXbBdCiYttgcnucAvovSHwYfedDYvMBhpIcycGwc","validation_rules":"ZPvnoWfjZfqUwebdGisRBIUNOpliwzRxoeMPrrwpUcBbiAqjlg"}
     """
     Then I should get "401" status code
     When format is json and I send post to "/api/v1/contact_fields" with:
     """
-    {"name":"AYiVuiGNPZXAZgUffYghQiVeGrcAEOaVBCPVUhsidpbTzibIMm"}
+    {"name":"hVLiQdyOJgTvjhMxsJOeugaHvNvOdivpnqXCqxjmLTUCgqXHmW","value_type":"AvxReNCzCfQOWzsiBsRERjsvetUUbMDLogFxPhdjfwMvvhXmdZ","validation_rules":"LtgtXGrupkixLGhAbGlBUSsilbYiPzPcJcRrLxkGRrCIILBrei"}
     """
     Then I should get "401" status code
     When format is json and I send delete to "/api/v1/contact_fields/1"

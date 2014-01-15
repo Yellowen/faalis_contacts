@@ -8,7 +8,7 @@ class API::V1::ContactFieldsController < Faalis::APIController
   end
 
   def create
-
+    
     if @contact_field.save
       respond_with(@contact_field)
     else
@@ -23,7 +23,7 @@ class API::V1::ContactFieldsController < Faalis::APIController
   end
 
   def update
-
+    
 
     if @contact_field.update(resource_params)
       respond_with(@contact_field)
@@ -46,7 +46,7 @@ class API::V1::ContactFieldsController < Faalis::APIController
   end
 
   def resource_params
-    params.require(:contact_field).permit(:id, :name)
+    params.require(:contact_field).permit(:id, :name, :value_type, :validation_rules)
   end
 
 end

@@ -3,7 +3,7 @@ json.array! @contacts do |contact|
   json.details contact.details do |detail|
     json.id detail.id
     json.type detail.detail_type
-    json.field detail.detail_field
+    json.field detail.detail_field_id
     json.value detail.detail_value
   end
 end

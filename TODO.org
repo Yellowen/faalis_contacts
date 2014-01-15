@@ -2,3 +2,5 @@
 ** TODO add avatar support
 ** TODO add a foreign key to user which is optional
 ** TODO change the detail template to suit contact view
+** TODO handle custom error for detail value validation
+** TODO add a code snippet to allow user using javascript like object instead of json

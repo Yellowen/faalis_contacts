@@ -20,6 +20,30 @@
   
   
   
+    
+      <div class="small-4 columns float-left small-offset-2">
+        <label><span translate>Value type</span> :</label>
+        
+          <select id="id_value_type" ui-select2="select2options" ng-model="value_type" name="value_type" >
+            <option ng-repeat="item in value_type_choices" value="{{ item.name }}" title="{{ item.title }}" ng-selected="value_type === item.name">{{ item.title }}</option>
+          </select>
+          
+          <small id="id_value_type_msg"></small>
+    </div>
+  </div>
+  
+  
+    <div class="row">
+      <div class="small-4 columns ">
+        <label><span translate>Validation rules</span> :</label>
+        
+          <textarea id="id_validation_rules" class="rounded" ng-model="validation_rules" name="validation_rules" ></textarea>
+          
+          <small id="id_validation_rules_msg"></small>
+    </div>
+  
+  
+  
   </fieldset>
 </form>
 

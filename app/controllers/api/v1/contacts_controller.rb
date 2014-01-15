@@ -11,7 +11,7 @@ class API::V1::ContactsController < Faalis::APIController
     details = params[:contact][:details] || []
     details_list = []
     details.each do |detail|
-      contact_detail = ContactDetails.create!(:detail_field => detail[:field],
+      contact_detail = ContactDetails.create(:detail_field_id => detail[:field],
                                               :detail_type => detail[:type],
                                               :detail_value => detail[:value])
       details_list << contact_detail
@@ -36,7 +36,7 @@ class API::V1::ContactsController < Faalis::APIController
     details = params[:contact][:details] || []
     details_list = []
     details.each do |detail|
-      contact_detail = ContactDetails.create!(:detail_field => detail[:field],
+      contact_detail = ContactDetails.create(:detail_field_id => detail[:field],
                                               :detail_type => detail[:type],
                                               :detail_value => detail[:value])
       details_list << contact_detail
