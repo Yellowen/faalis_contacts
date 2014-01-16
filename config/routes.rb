@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :contacts, :except => [:new]
       resources :contact_types, :except => [:new]
       resources :contact_fields, :except => [:new]
+      resources :contact_details, :only => [:destroy], :class_name => "ContactDetails"
     end
   end
 end
