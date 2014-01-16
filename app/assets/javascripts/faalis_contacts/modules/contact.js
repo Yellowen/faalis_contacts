@@ -288,7 +288,15 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
 
     $scope.remove_row = function(){
         $scope.details_count.pop();
-        $scope.details.pop();
+        var lastobj = $scope.details.pop();
+        if ("id" in lastobj) {
+            API.all("contact_details").customDELETE(lastobj.id)
+            .then(function(data) {
+                success_message(data.msg);
+            }, function(data){
+                catch_error(data);
+            });
+        }
     };
 
     $scope.have = function(field, obj_id) {
@@ -307,6 +315,9 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
     };
 
     $scope.save = function(save_another){
+        $("small.error").html("");
+        $("small.error").removeClass("error");
+
         var contact = {contact: {
             prefix: $scope.prefix,
             first_name: $scope.first_name,
