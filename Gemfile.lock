@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    faalis_contacts (0.1.0)
+    faalis_contacts (0.3.0)
       globalize (>= 4.0.0.alpha.2)
       jbuilder (~> 1.2)
       jquery-rails
