@@ -39,3 +39,4 @@ docs/*
 node_modules/
 .development
 doc/
+Gemfile.lock
