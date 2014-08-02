@@ -1,4 +1,5 @@
 class ContactDetails < ActiveRecord::Base
+    include  Faalis::Concerns::Authorizable
   @already_validate = false
 
   belongs_to :contact
