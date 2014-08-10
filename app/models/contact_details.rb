@@ -18,7 +18,7 @@ class ContactDetails < ActiveRecord::Base
       return
     end
 
-    print "----" * 1000
+
     if detail_field_id.nil?
       errors[:detail_field] = _("Field can not be empty.")
       return
