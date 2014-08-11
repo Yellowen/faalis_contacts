@@ -4,4 +4,8 @@ class Contact < ActiveRecord::Base
   validates :first_name, :presence => true
   validates :last_name, :presence => true
   #validates_with ValueValidator
+
+  def name
+      "#{organization} - #{first_name} #{last_name}"
+  end
 end
