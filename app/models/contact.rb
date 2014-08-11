@@ -7,5 +7,6 @@ class Contact < ActiveRecord::Base
 
   def name
       "#{organization} - #{first_name} #{last_name}"
+
   end
 end
