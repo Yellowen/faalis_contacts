@@ -1,4 +1,5 @@
 ContactField.create(name: "Phone", value_type: "string")
+ContactField.create(name: "Mobile", value_type: "string")
 ContactField.create(name: "Fax", value_type: "string")
 ContactField.create(name: "Email", value_type: "email")
 ContactField.create(name: "Web", value_type: "string")
