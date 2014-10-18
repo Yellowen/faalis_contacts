@@ -330,7 +330,7 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
             __res__: 0
         }};
         if (($scope.obj_id) && (is_copy === false)) {
-
+            if ($scope.is_submited !== true ){
             API.one("contacts", $scope.obj_id).patch(contact)
                 .then(function(){
                     success_message(gettext("Contact updated successfully."));
@@ -343,9 +343,12 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
                 }, function(data){
                     catch_error(data);
                 });
-
+            }else{
+                $scope.is_submited === true;
+            }
         }
         else {
+            if ($scope.is_submited !== true ){
             API.all("contacts").customPOST(contact, "").then(function(){
                 success_message(gettext("Contact created successfully."));
                 if (save_another) {
@@ -357,6 +360,9 @@ Contacts.controller("AddContactController", ["Restangular", "$scope", "$location
             }, function(data){
                 catch_error(data);
             });
+            }else{
+                $scope.is_submited === true;
+            }
         }
 
     };
