@@ -1,0 +1,265 @@
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  translate.fa.pot  #-#-#-#-#\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Behnam Ahmad Khan Beigi <yottanamI@gnu.org>\n"
+"Language: fa\n"
+"Language-Team: Persian <>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"PO-Revision-Date: 2014-09-02 11:11+0430\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app/views/angularjs_templates/contact/index.html
+msgid "-- Select a field --"
+msgstr "-- یک گزینه را انتخاب کنید --"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "Avatar"
+msgstr "آواتار"
+
+#: app/views/angularjs_templates/contact/index.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Bulk Edit"
+msgstr "تغییر گروهی"
+
+#: app/views/angularjs_templates/contact/index.html
+#: app/views/angularjs_templates/contact/new.html
+#: app/views/angularjs_templates/contact_field/new.html
+#: app/views/angularjs_templates/contact_type/new.html
+msgid "Cancel"
+msgstr "انصراف"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Contact Fields"
+msgstr "فیلدهای مخاطب‌ها"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Contact Types"
+msgstr "نوع مخاطب‌ها"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Contact created successfully."
+msgstr "مخاطب به طور کامل ساخته شد"
+
+#: app/views/angularjs_templates/contact_field/index.html
+msgid "Contact fields"
+msgstr "فیلد‌های مخاطبین"
+
+#: app/views/angularjs_templates/contact_type/index.html
+msgid "Contact types"
+msgstr "نوع‌های مخاطبین"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Contact updated successfully."
+msgstr "مخاطب به طور کامل به روزرسانی شد"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact_field.js
+msgid "ContactField created successfully."
+msgstr "فیلد مخاطب به طور کامل ساخته شد"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact_field.js
+msgid "ContactField updated successfully."
+msgstr "فیلد مخاطب به روز رسانی شد"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact_type.js
+msgid "ContactType created successfully."
+msgstr "نوع مخاطب به طور کامل ساخته شد"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact_type.js
+msgid "ContactType updated successfully."
+msgstr "نوع مخاطب به طور کامل به روزرسانی شد"
+
+#: app/views/angularjs_templates/contact/index.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Contacts"
+msgstr "مخاطبین"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "Details"
+msgstr "جزئیات"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+#: app/assets/javascripts/faalis_contacts/modules/contact_field.js
+#: app/assets/javascripts/faalis_contacts/modules/contact_type.js
+msgid "Duplicate"
+msgstr "تکثیر"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "Edit Avatar"
+msgstr "ویرایش آواتار"
+
+#: app/views/angularjs_templates/contact_field/new.html
+msgid "Edit Contact fields"
+msgstr "ویرایش فیلد‌های مخاطب"
+
+#: app/views/angularjs_templates/contact_type/new.html
+msgid "Edit Contact types"
+msgstr "ویرایش نوع‌های مخاطبین"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "Field"
+msgstr "فیلد"
+
+#: app/views/angularjs_templates/contact/index.html
+msgid "Field Name:"
+msgstr "نام فیلد:"
+
+#: app/views/angularjs_templates/contact/index.html
+msgid "Field Value:"
+msgstr "مقدار فیلد:"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "First name"
+msgstr "نام"
+
+#: app/views/angularjs_templates/contact/details.html
+msgid "First_name :"
+msgstr "نام"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "General"
+msgstr "عمومی"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Is organization"
+msgstr "سازمان"
+
+#: app/views/angularjs_templates/contact/details.html
+msgid "Is_organization :"
+msgstr "سازمان :"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Last name"
+msgstr "نام خانوادگی"
+
+#: app/views/angularjs_templates/contact/details.html
+msgid "Last_name :"
+msgstr "نام خانوادگی :"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Middle name"
+msgstr "نام میانی"
+
+#: app/views/angularjs_templates/contact/details.html
+msgid "Middle_name :"
+msgstr "نام میانی :"
+
+#: app/views/angularjs_templates/contact_field/new.html
+#: app/views/angularjs_templates/contact_type/new.html
+msgid "Name"
+msgstr "نام"
+
+#: app/views/angularjs_templates/contact_field/details.html
+#: app/views/angularjs_templates/contact_type/details.html
+msgid "Name :"
+msgstr "نام :"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+#: app/assets/javascripts/faalis_contacts/modules/contact_field.js
+#: app/assets/javascripts/faalis_contacts/modules/contact_type.js
+msgid "New"
+msgstr "جدید"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "New Avatar"
+msgstr "آواتار جدید"
+
+#: app/views/angularjs_templates/contact_field/new.html
+msgid "New Contact fields"
+msgstr "فیلد مخاطبین جدید"
+
+#: app/views/angularjs_templates/contact_type/new.html
+msgid "New Contact types"
+msgstr "نوع مخاطبین جدید"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Organization"
+msgstr "سازمان"
+
+#: app/views/angularjs_templates/contact/details.html
+msgid "Organization :"
+msgstr "سازمان :"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Prefix"
+msgstr "پیشوند"
+
+#: app/views/angularjs_templates/contact/details.html
+msgid "Prefix :"
+msgstr "پیشوند :"
+
+#: app/views/angularjs_templates/contact/index.html
+#: app/views/angularjs_templates/contact/new.html
+#: app/views/angularjs_templates/contact_field/new.html
+#: app/views/angularjs_templates/contact_type/new.html
+msgid "Save"
+msgstr "ذخیره"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/views/angularjs_templates/contact_field/new.html
+#: app/views/angularjs_templates/contact_type/new.html
+msgid "Save & Add Another"
+msgstr "ذخیره و جدید"
+
+#: app/views/angularjs_templates/contact/new.html
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+msgid "Suffix"
+msgstr "پسوند"
+
+#: app/views/angularjs_templates/contact/details.html
+msgid "Suffix :"
+msgstr "پسوند :"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "Type"
+msgstr "نوع"
+
+#: app/views/angularjs_templates/contact_field/new.html
+msgid "Validation rules"
+msgstr "قوانین اعتبارسنجی"
+
+#: app/views/angularjs_templates/contact_field/details.html
+msgid "Validation_rules :"
+msgstr "قوانین اعتبارسنجی :"
+
+#: app/views/angularjs_templates/contact/new.html
+msgid "Value"
+msgstr "مقدار"
+
+#: app/views/angularjs_templates/contact_field/new.html
+msgid "Value type"
+msgstr "نوع مقدار"
+
+#: app/views/angularjs_templates/contact_field/details.html
+msgid "Value_type :"
+msgstr "نوع مقدار :"
+
+#: app/assets/javascripts/faalis_contacts/modules/contact.js
+#: app/assets/javascripts/faalis_contacts/modules/contact_field.js
+#: app/assets/javascripts/faalis_contacts/modules/contact_type.js
+msgid "You should only select one item to copy."
+msgstr "شما باید فقط یک آیتم را انتخاب کنید"
+
+#: app/views/angularjs_templates/contact/index.html
+msgid "field:"
+msgstr "فیلد :"
+
+#: app/views/angularjs_templates/contact/index.html
+msgid "of"
+msgstr "از"
+
+#: app/views/angularjs_templates/contact/index.html
+msgid "{{ field.title }}"
+msgstr ""
