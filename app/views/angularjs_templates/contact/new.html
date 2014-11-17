@@ -1,10 +1,14 @@
-<section class="tabs">
-  <ul>
-    <li ng-click="activate_tab(1)" ng-class="{active: current_tab == 1, tab1: current_tab == 1}"><span translate>General</span></li> |
-    <li ng-click="activate_tab(2)" ng-class="{active: current_tab == 2, tab2: current_tab == 2}"><span translate>Details</span></li> |
-    <li ng-click="activate_tab(3)" ng-class="{active: current_tab == 3, tab3: current_tab == 3}"><span translate>Avatar</span></li> |
-  </ul>
-</section>
+<div role="tabpanel">
+
+
+
+<div class="tabpanel">
+    <ul class="nav nav-tabs">
+      <li ng-click="activate_tab(1)" ng-class="{active: current_tab == 1, tab1: current_tab == 1}" class="active"><a href translate>General</span></a>
+      <li ng-click="activate_tab(2)" ng-class="{active: current_tab == 2, tab2: current_tab == 2}" ><a href translate>Details</a></li>
+      <li ng-click="activate_tab(3)" ng-class="{active: current_tab == 3, tab3: current_tab == 3}"><a href translate>Avatar</a></li>
+    </ul>
+</div>
 
 <form novalidate name="form">
   <div class="newform">
@@ -67,28 +71,28 @@
         <legend><span translate>Details</span></legend>
 
         <div class="row" ng-repeat="detail_number in details_count">
-            <div class="small-4 columns">
-              <label><span translate>Field</span> :</label>
-              <select name="detail_field_{{ detail_number }}" ui-select2="select2options" id="id_detail_field_{{ detail_number }}" ng-model="details[detail_number].field">
-                <option ng-repeat="item in detail_fields" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
-              </select>
-              <small id="id_detail_field_{{ detail_number}}_msg"></small>
-            </div>
+          <div class="small-4 columns">
+            <label><span translate>Field</span> :</label>
+            <select name="detail_field_{{ detail_number }}" ui-select2="select2options" id="id_detail_field_{{ detail_number }}" ng-model="details[detail_number].field">
+              <option ng-repeat="item in detail_fields" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
+            </select>
+            <small id="id_detail_field_{{ detail_number}}_msg"></small>
+          </div>
 
-            <div class="small-4 columns">
-              <label><span translate>Type</span> :</label>
-              <select name="detail_type_{{ detail_number }}" ui-select2="select2options" id="id_detail_type_{{ detail_number }}" ng-model="details[detail_number].type">
-                <option ng-repeat="item in detail_types" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
-              </select>
-              <small id="id_detail_type_{{ detail_number}}_msg"></small>
-            </div>
+          <div class="small-4 columns">
+            <label><span translate>Type</span> :</label>
+            <select name="detail_type_{{ detail_number }}" ui-select2="select2options" id="id_detail_type_{{ detail_number }}" ng-model="details[detail_number].type">
+              <option ng-repeat="item in detail_types" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
+            </select>
+            <small id="id_detail_type_{{ detail_number}}_msg"></small>
+          </div>
 
-            <div class="small-4 columns">
-              <label><span translate>Value</span> :</label>
-              <input  id="id_detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="rounded string_field"/>
-              <small id="id_detail_value_{{ detail_number}}_msg"></small>
+          <div class="small-4 columns">
+            <label><span translate>Value</span> :</label>
+            <input  id="id_detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="rounded string_field"/>
+            <small id="id_detail_value_{{ detail_number}}_msg"></small>
 
-            </div>
+          </div>
         </div>
 
         <div class="row">
@@ -117,4 +121,4 @@
     <button class="btn small red" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
   </div>
 </div>
-</div>
+      </div>

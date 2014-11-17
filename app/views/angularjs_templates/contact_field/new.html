@@ -1,61 +1,64 @@
-
-
 <form novalidate name="form">
- <div class="newform">
-  <fieldset class="form">
+  <div class="">
+    <fieldset class="form box box-info">
 
-  <legend ng-if="!editing"><span translate>New Contact fields</span></legend>
-  <legend ng-if="editing"><span translate>Edit Contact fields</span></legend>
-
-
-
-    <div class="row">
-      <div class="small-4 columns ">
-        <label><i class="inline fa fa-asterisk"></i> <span translate>Name</span> :</label>
-
-          <input  id="id_name" ng-model="name" name="name" type="text" class="rounded string_field" required />
-
-          <small id="id_name_msg"></small>
-    </div>
+      <div class="box-header">
+        <h2 class="box-title">
+          <span ng-if="!editing"><span translate>New Contact fields</span></span>
+          <span ng-if="editing"><span translate>Edit Contact fields</span></span>
+        </h2>
+      </div>
 
 
+      <div class="box-body">
 
 
-      <div class="small-4 columns float-left small-offset-2">
-        <label><span translate>Value type</span> :</label>
+        <div class="row">
+          <div class="col-sm-4 form-group ">
+            <label><i class="inline fa fa-asterisk"></i> <span translate>Name</span> :</label>
 
-          <select id="id_value_type" ui-select2="select2options" ng-model="value_type" name="value_type" >
-            <option ng-repeat="item in value_type_choices" value="{{ item.name }}" title="{{ item.title }}" ng-selected="value_type === item.name">{{ item.title }}</option>
-          </select>
+            <input  id="id_name" ng-model="name" name="name" type="text" class="rounded string_field" required />
 
-          <small id="id_value_type_msg"></small>
-    </div>
-  </div>
-
-
-    <div class="row">
-      <div class="small-4 columns ">
-        <label><span translate>Validation rules</span> :</label>
-
-          <textarea id="id_validation_rules" class="rounded" ng-model="validation_rules" name="validation_rules" ></textarea>
-
-          <small id="id_validation_rules_msg"></small>
-    </div>
+            <small id="id_name_msg"></small>
+          </div>
 
 
 
-  </fieldset>
+
+          <div class="col-sm-4 from-group pull-left col-sm-offest-2">
+            <label><span translate>Value type</span> :</label>
+
+            <select id="id_value_type" ui-select2="select2options" ng-model="value_type" name="value_type" >
+              <option ng-repeat="item in value_type_choices" value="{{ item.name }}" title="{{ item.title }}" ng-selected="value_type === item.name">{{ item.title }}</option>
+            </select>
+
+            <small id="id_value_type_msg"></small>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label><span translate>Validation rules</span> :</label>
+
+            <textarea id="id_validation_rules" class="rounded" ng-model="validation_rules" name="validation_rules" ></textarea>
+
+            <small id="id_validation_rules_msg"></small>
+          </div>
+
+
+
+    </fieldset>
 </form>
 
 
 
-
-
-  <div class="row">
-      <div class="small-6 columns">
-        <button class="btn btn-lg btn-success" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save</span></button>
-        <button class="btn btn-lg btn-primary" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
-        <button class="btn btn-lg btn-danger" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
-      </div>
+<div class="row">
+  <div class="col-sm-6 form-group">
+    <button class="btn btn-lg btn-success" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save</span></button>
+    <button class="btn btn-lg btn-primary" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
+    <button class="btn btn-lg btn-danger" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
   </div>
 </div>
+        </div>
+      </div>
