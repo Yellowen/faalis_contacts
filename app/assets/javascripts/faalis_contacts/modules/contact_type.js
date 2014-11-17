@@ -31,7 +31,7 @@ ContactTypes.controller("ContactTypeController", ["$scope", "gettext", "Restangu
         list: API.all("contact_types")
     };
     $scope.contact_types = [];
-    
+
 
     // details_template is the address of template which should load for
     // each item details section
@@ -42,14 +42,14 @@ ContactTypes.controller("ContactTypeController", ["$scope", "gettext", "Restangu
         {
             title: gettext("New"),
             icon: "fa fa-plus",
-            classes: "btn tiny green",
+            classes: "btn btn-success",
             route: "#contact_types/new"
 
         },
         {
             title: gettext("Duplicate"),
             icon: "fa fa-files-o",
-            classes: "btn tiny red",
+            classes: "btn btn-warning",
             action: function(){
                 var selected = _.find($scope.contact_types, function(x){
                     return x.is_selected === true;
@@ -104,8 +104,8 @@ ContactTypes.controller("AddContactTypeController", ["Restangular", "$scope", "$
     $scope.obj_id = null;
     var is_copy = false;
 
-    
-    
+
+
     if( "id" in $routeParams ){
         $scope.obj_id = $routeParams.id;
         $scope.editing = true;
@@ -116,7 +116,7 @@ ContactTypes.controller("AddContactTypeController", ["Restangular", "$scope", "$
 
         var obj = API.one("contact_types", $scope.obj_id).get()
                 .then(function(data) {
-                
+
                     $scope.name = data.name;
                 }, function(data){
                     catch_error(data);
@@ -177,4 +177,3 @@ ContactTypes.controller("AddContactTypeController", ["Restangular", "$scope", "$
 
     };
 }]);
-

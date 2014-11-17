@@ -31,7 +31,7 @@ ContactFields.controller("ContactFieldController", ["$scope", "gettext", "Restan
         list: API.all("contact_fields")
     };
     $scope.contact_fields = [];
-    
+
 
     // details_template is the address of template which should load for
     // each item details section
@@ -42,14 +42,14 @@ ContactFields.controller("ContactFieldController", ["$scope", "gettext", "Restan
         {
             title: gettext("New"),
             icon: "fa fa-plus",
-            classes: "btn tiny green",
+            classes: "btn btn-success",
             route: "#contact_fields/new"
 
         },
         {
             title: gettext("Duplicate"),
             icon: "fa fa-files-o",
-            classes: "btn tiny red",
+            classes: "btn btn-warning",
             action: function(){
                 var selected = _.find($scope.contact_fields, function(x){
                     return x.is_selected === true;
@@ -104,7 +104,7 @@ ContactFields.controller("AddContactFieldController", ["Restangular", "$scope", 
     $scope.obj_id = null;
     var is_copy = false;
 
-    
+
     $scope.value_type_choices = _.sortBy([
         {name: "string", title: "String"},
         {name: "numeric", title: "Numeric"},
@@ -120,7 +120,7 @@ ContactFields.controller("AddContactFieldController", ["Restangular", "$scope", 
 
         var obj = API.one("contact_fields", $scope.obj_id).get()
                 .then(function(data) {
-                
+
                     $scope.name = data.name;
                     $scope.value_type = data.value_type;
                     $scope.validation_rules = data.validation_rules;
@@ -185,4 +185,3 @@ ContactFields.controller("AddContactFieldController", ["Restangular", "$scope", 
 
     };
 }]);
-

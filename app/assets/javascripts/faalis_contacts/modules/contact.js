@@ -80,14 +80,14 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
         {
             title: gettext("New"),
             icon: "fa fa-plus",
-            classes: "btn tiny green",
+            classes: "btn btn-success",
             route: "#contacts/new"
 
         },
         {
             title: gettext("Bulk Edit"),
             icon: "fa fa-edit",
-            classes: "btn tiny yellow",
+            classes: "btn btn-info",
             action: function(){
                 $scope.$apply("bulk_edit = ! bulk_edit");
             }
@@ -96,7 +96,7 @@ Contacts.controller("ContactController", ["$scope", "gettext", "Restangular", "c
         {
             title: gettext("Duplicate"),
             icon: "fa fa-files-o",
-            classes: "btn tiny red",
+            classes: "btn btn-warning",
             action: function(){
                 var selected = _.find($scope.contacts, function(x){
                     return x.is_selected === true;
