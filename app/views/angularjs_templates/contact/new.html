@@ -16,13 +16,13 @@
       <legend><span translate>General</span></legend>
 
       <div class="row">
-        <div class="small-4 columns ">
+        <div class="col-sm-4 form-group ">
           <label><span translate>Prefix</span> :</label>
           <input  id="id_prefix" ng-model="prefix" name="prefix" type="text" class="rounded string_field"  />
           <small id="id_prefix_msg"></small>
         </div>
 
-        <div class="small-4 columns float-left small-offset-2">
+        <div class="col-sm-4 form-group col-sm-offset-2">
           <label><span translate>First name</span> :</label>
           <input  id="id_first_name" ng-model="first_name" name="first_name" type="text" class="rounded string_field"  />
           <small id="id_first_name_msg"></small>
@@ -30,13 +30,13 @@
       </div>
 
       <div class="row">
-        <div class="small-4 columns ">
+        <div class="col-sm-4 form-group">
           <label><span translate>Middle name</span> :</label>
           <input  id="id_middle_name" ng-model="middle_name" name="middle_name" type="text" class="rounded string_field"  />
           <small id="id_middle_name_msg"></small>
         </div>
 
-        <div class="small-4 columns float-left small-offset-2">
+        <div class="col-sm-4 form-group col-sm-offest-2<">
           <label><span translate>Last name</span> :</label>
           <input  id="id_last_name" ng-model="last_name" name="last_name" type="text" class="rounded string_field"  />
           <small id="id_last_name_msg"></small>
@@ -44,13 +44,13 @@
       </div>
 
       <div class="row">
-        <div class="small-4 columns ">
+        <div class="col-sm4 form-group ">
           <label><span translate>Suffix</span> :</label>
           <input  id="id_suffix" ng-model="suffix" name="suffix" type="text" class="rounded string_field"  />
           <small id="id_suffix_msg"></small>
         </div>
 
-        <div class="small-4 columns float-left small-offset-2">
+        <div class="col-sm4 form-group pull-left col-sm-offest-2">
           <label><span translate>Organization</span> :</label>
           <input  id="id_organization" ng-model="organization" name="organization" type="text" class="rounded string_field"  />
           <small id="id_organization_msg"></small>
@@ -58,7 +58,7 @@
       </div>
 
       <div class="row">
-        <div class="small-4 columns ">
+        <div class="col-sm-4 form-group ">
           <label><span translate>Is organization</span> :</label>
           <input  id="id_is_organization" ng-model="is_organization" type="checkbox" name="is_organization" class="rounded boolean_field"  />
           <small id="id_is_organization_msg"></small>
@@ -71,7 +71,7 @@
         <legend><span translate>Details</span></legend>
 
         <div class="row" ng-repeat="detail_number in details_count">
-          <div class="small-4 columns">
+          <div class="col-sm-4 form-group">
             <label><span translate>Field</span> :</label>
             <select name="detail_field_{{ detail_number }}" ui-select2="select2options" id="id_detail_field_{{ detail_number }}" ng-model="details[detail_number].field">
               <option ng-repeat="item in detail_fields" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
@@ -79,7 +79,7 @@
             <small id="id_detail_field_{{ detail_number}}_msg"></small>
           </div>
 
-          <div class="small-4 columns">
+          <div class="col-sm-4 form-group">
             <label><span translate>Type</span> :</label>
             <select name="detail_type_{{ detail_number }}" ui-select2="select2options" id="id_detail_type_{{ detail_number }}" ng-model="details[detail_number].type">
               <option ng-repeat="item in detail_types" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
@@ -87,7 +87,7 @@
             <small id="id_detail_type_{{ detail_number}}_msg"></small>
           </div>
 
-          <div class="small-4 columns">
+          <div class="col-sm-4 form-group">
             <label><span translate>Value</span> :</label>
             <input  id="id_detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="rounded string_field"/>
             <small id="id_detail_value_{{ detail_number}}_msg"></small>
@@ -96,9 +96,9 @@
         </div>
 
         <div class="row">
-          <div class="small-2 columns float-right">
-            <span ng-click="add_another_row()" class="btn tiny green"><i class="fa fa-plus"></i></span>
-            <span ng-click="remove_row()" class="btn tiny red"><i class="fa fa-minus"></i></span>
+          <div class="col-sm-4 form-group pull-left col-sm-offest-2">
+            <span ng-click="add_another_row()" class="btn btn-success"><i class="fa fa-plus"></i></span>
+            <span ng-click="remove_row()" class="btn btn-warning"><i class="fa fa-minus"></i></span>
           </div>
         </div>
       </fieldset>
@@ -115,10 +115,10 @@
 
 
 <div class="row">
-  <div class="small-6 columns">
-    <button class="btn small green" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save</span></button>
-    <button class="btn small blue" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
-    <button class="btn small red" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
+  <div class="col-sm-6 gorm-group">
+    <button class="btn btn-success" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save</span></button>
+    <button class="btn btn-primary" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
+    <button class="btn btn-warning" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
   </div>
 </div>
       </div>
