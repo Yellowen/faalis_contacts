@@ -1,7 +1,6 @@
 <div role="tabpanel">
 
 
-
 <div class="tabpanel">
     <ul class="nav nav-tabs">
       <li ng-click="activate_tab(1)" ng-class="{active: current_tab == 1, tab1: current_tab == 1}" class="active"><a href translate>General</span></a>
@@ -18,13 +17,13 @@
       <div class="row">
         <div class="col-sm-4 form-group ">
           <label><span translate>Prefix</span> :</label>
-          <input  id="id_prefix" ng-model="prefix" name="prefix" type="text" class="rounded string_field"  />
+          <input  id="id_prefix" ng-model="prefix" name="prefix" type="text" class="form-control"  />
           <small id="id_prefix_msg"></small>
         </div>
 
-        <div class="col-sm-4 form-group col-sm-offset-2">
+        <div class="col-sm-4 form-group ">
           <label><span translate>First name</span> :</label>
-          <input  id="id_first_name" ng-model="first_name" name="first_name" type="text" class="rounded string_field"  />
+          <input  id="id_first_name" ng-model="first_name" name="first_name" type="text" class="form-control"  />
           <small id="id_first_name_msg"></small>
         </div>
       </div>
@@ -32,27 +31,27 @@
       <div class="row">
         <div class="col-sm-4 form-group">
           <label><span translate>Middle name</span> :</label>
-          <input  id="id_middle_name" ng-model="middle_name" name="middle_name" type="text" class="rounded string_field"  />
+          <input  id="id_middle_name" ng-model="middle_name" name="middle_name" type="text" class="form-control"  />
           <small id="id_middle_name_msg"></small>
         </div>
 
-        <div class="col-sm-4 form-group col-sm-offest-2<">
+        <div class="col-sm-4 form-group ">
           <label><span translate>Last name</span> :</label>
-          <input  id="id_last_name" ng-model="last_name" name="last_name" type="text" class="rounded string_field"  />
+          <input  id="id_last_name" ng-model="last_name" name="last_name" type="text" class="form-control string_field"  />
           <small id="id_last_name_msg"></small>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm4 form-group ">
+        <div class="col-sm-4 form-group ">
           <label><span translate>Suffix</span> :</label>
-          <input  id="id_suffix" ng-model="suffix" name="suffix" type="text" class="rounded string_field"  />
+          <input  id="id_suffix" ng-model="suffix" name="suffix" type="text" class="form-control"  />
           <small id="id_suffix_msg"></small>
         </div>
 
-        <div class="col-sm4 form-group pull-left col-sm-offest-2">
+        <div class="col-sm-4 form-group">
           <label><span translate>Organization</span> :</label>
-          <input  id="id_organization" ng-model="organization" name="organization" type="text" class="rounded string_field"  />
+          <input  id="id_organization" ng-model="organization" name="organization" type="text" class="form-control"  />
           <small id="id_organization_msg"></small>
         </div>
       </div>
@@ -60,7 +59,7 @@
       <div class="row">
         <div class="col-sm-4 form-group ">
           <label><span translate>Is organization</span> :</label>
-          <input  id="id_is_organization" ng-model="is_organization" type="checkbox" name="is_organization" class="rounded boolean_field"  />
+          <input  id="id_is_organization" ng-model="is_organization" type="checkbox" name="is_organization" class=""  />
           <small id="id_is_organization_msg"></small>
         </div>
 
@@ -89,7 +88,7 @@
 
           <div class="col-sm-4 form-group">
             <label><span translate>Value</span> :</label>
-            <input  id="id_detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="rounded string_field"/>
+            <input  id="id_detail_value_{{ detail_number }}" ng-model="details[detail_number].value" type="text" name="detail_value_{{ detail_number }}" class="form-control string_field"/>
             <small id="id_detail_value_{{ detail_number}}_msg"></small>
 
           </div>
@@ -97,8 +96,8 @@
 
         <div class="row">
           <div class="col-sm-4 form-group pull-left col-sm-offest-2">
-            <span ng-click="add_another_row()" class="btn btn-success"><i class="fa fa-plus"></i></span>
-            <span ng-click="remove_row()" class="btn btn-warning"><i class="fa fa-minus"></i></span>
+            <span ng-click="add_another_row()" class="btn btn-lg btn-success btn-lg"><i class="fa fa-plus"></i></span>
+            <span ng-click="remove_row()" class="btn btn-lg btn-warning"><i class="fa fa-minus"></i></span>
           </div>
         </div>
       </fieldset>
@@ -116,9 +115,9 @@
 
 <div class="row">
   <div class="col-sm-6 gorm-group">
-    <button class="btn btn-success" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save</span></button>
-    <button class="btn btn-primary" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
-    <button class="btn btn-warning" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
+    <button class="btn btn-lg btn-success" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save</span></button>
+    <button class="btn btn-lg btn-primary" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty || is_submitted"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
+    <button class="btn btn-lg btn-warning" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
   </div>
 </div>
       </div>

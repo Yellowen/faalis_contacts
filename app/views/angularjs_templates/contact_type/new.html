@@ -1,37 +1,32 @@
-
-
 <form novalidate name="form">
- <div class="newform">
-  <fieldset class="form">
+  <div class="">
+    <fieldset class="form box box-info">
+      <div class="box-header">
+        <legend ng-if="!editing"><span translate>New Contact types</span></legend>
+        <legend ng-if="editing"><span translate>Edit Contact types</span></legend>
 
-  <legend ng-if="!editing"><span translate>New Contact types</span></legend>
-  <legend ng-if="editing"><span translate>Edit Contact types</span></legend>
+      </div>
 
-  
-  
-    <div class="row">
-      <div class="small-4 columns ">
-        <label><i class="inline fa fa-asterisk"></i> <span translate>Name</span> :</label>
-        
-          <input  id="id_name" ng-model="name" name="name" type="text" class="rounded string_field" required />
-        
-          <small id="id_name_msg"></small>
-    </div>
-  
-  
-  
-  </fieldset>
+      <div class="box-body">
+
+        <div class="row">
+          <div class="col-sm-4 form-group ">
+            <label><i class="inline fa fa-asterisk"></i> <span translate>Name</span> :</label>
+
+            <input  id="id_name" ng-model="name" name="name" type="text" class="form-controll" string_field" required />
+
+            <small id="id_name_msg"></small>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
 </form>
 
-
-
-
-
-  <div class="row">
-      <div class="small-6 columns">
-        <button class="btn small green" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save</span></button>
-        <button class="btn small blue" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
-        <button class="btn small red" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
-      </div>
+<div class="row">
+  <div class="col-sm-6 form-group">
+    <button class="btn btn-success btn-lg" ng-click="save(false)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save</span></button>
+    <button class="btn btn-primary btn-lg" ng-click="save(true)" ng-disabled="form.$invalid || !form.$dirty"><i class="fa fa-check"></i> <span translate>Save & Add Another</span></button>
+    <button class="btn btn-warning btn-lg" ng-click="cancel()"><i class="fa fa-times"></i> <span translate>Cancel</span></button>
   </div>
 </div>
