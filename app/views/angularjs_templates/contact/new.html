@@ -72,7 +72,7 @@
         <div class="row" ng-repeat="detail_number in details_count">
           <div class="col-sm-4 form-group">
             <label><span translate>Field</span> :</label>
-            <select name="detail_field_{{ detail_number }}" ui-select2="select2options" id="id_detail_field_{{ detail_number }}" ng-model="details[detail_number].field">
+            <select name="detail_field_{{ detail_number }}" ui-select2="select2options" id="id_detail_field_{{ detail_number }}" ng-model="details[detail_number].field" >
               <option ng-repeat="item in detail_fields" value="{{ item.id }}" ng-select="item.id === details[detial_number].type">{{ item.name }}</option>
             </select>
             <small id="id_detail_field_{{ detail_number}}_msg"></small>
@@ -96,8 +96,8 @@
 
         <div class="row">
           <div class="col-sm-4 form-group pull-left col-sm-offest-2">
-            <span ng-click="add_another_row()" class="btn btn-lg btn-success btn-lg"><i class="fa fa-plus"></i></span>
-            <span ng-click="remove_row()" class="btn btn-lg btn-warning"><i class="fa fa-minus"></i></span>
+            <span ng-click="add_another_row()" class="btn btn-success "><i class="fa fa-plus"></i></span>
+            <span ng-click="remove_row()" class="btn btn-warning"><i class="fa fa-minus"></i></span>
           </div>
         </div>
       </fieldset>
