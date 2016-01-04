@@ -3,15 +3,11 @@ if File.exists?([File.expand_path("../../../", __FILE__),
   $LOAD_PATH <<  File.expand_path('../../../../Faalis/lib', __FILE__)
 end
 
-require "faalis"
+require 'faalis'
 
 module FaalisContacts
   class Engine < ::Rails::Engine
-  engine_name "faalis_contacts"
-
-    ::Faalis::Engine.setup do |config|
-      config.models_with_permission = []
-    end
+    engine_name 'faalis_contacts'
 
   end
 end
